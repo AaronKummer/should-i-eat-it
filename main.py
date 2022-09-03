@@ -28,7 +28,7 @@ class ScannerApp(App):
         self.cam.export_to_png("./scan.png")
 
     def parse_responses(self, responses):
-        responses = [i["Name"] for i in example_aws_output]
+        responses = [i["Name"].lower() for i in example_aws_output]
         possible_responses = ["Probably don't eat it", "You might glow after", "It might not kill you?"]
         # for res in responses:
         #     for key in joke_dictionary:
