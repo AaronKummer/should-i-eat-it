@@ -5,11 +5,9 @@ from kivy.uix.camera import Camera
 from kivy.lang import Builder
 class ScannerApp(App):
     def build(self):
-        print('test')
         self.cam = Camera()
-        print('test2')
-        self.cam.play = True
         self.cam.resolution = (800, 800)
+        self.cam.play = True
         button = Button(text="take picture")
         button.size_hint = (.5,.2)
         button.pos_hint = {'x': .25, 'y': .25}
